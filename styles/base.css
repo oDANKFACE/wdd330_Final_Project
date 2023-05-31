@@ -1,0 +1,170 @@
+/* Box-sizing reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+figure,
+blockquote,
+fieldset,
+legend {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+
+/*  HEADER  ******************************************************************************************/
+/****************************************************************************************************/
+/***************************************************************************************************/
+
+
+/*  Header  ************************************/
+/***********************************************/
+
+header {
+
+}
+
+
+/*  Nav Bar  ************************************/
+/***********************************************/
+
+nav {
+    display: flex;
+    padding: 4px;
+}
+
+.nav-logo {
+    padding: 0 16px;
+}
+
+
+
+
+
+
+
+
+/*  MAIN  ******************************************************************************************/
+/****************************************************************************************************/
+/***************************************************************************************************/
+
+
+/*  Carousel  ***********************************/
+/***********************************************/
+
+.main-carousel-container {
+    position: relative;
+}
+
+.prev-button,
+.next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    background-color: #ccc;
+    border: none;
+    color: #fff;
+    font-size: 40px;
+}
+
+.next-button {
+    right: 0;
+}
+
+.prev-button:hover,
+.next-button:hover {
+    background-color: #aaa;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  TESTING  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+
+/*header,*/
+.main-carousel-container
+{
+    border: 1px solid orange;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
