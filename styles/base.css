@@ -1,37 +1,37 @@
-/* Box-sizing reset */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol,
-dl,
-figure,
-blockquote,
-fieldset,
-legend {
-    margin: 0;
-    padding: 0;
+:root {
+    --primary-color: #444444;
+    --primary-color-transparent: #44444455;
+    --secondary-color: #888888;
+    --secondary-color-transparent: #88888855;
+    --accent-color: #F1C40F;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: bold;
+header,
+main,
+footer {
+    padding: 15px;
+}
+
+header,
+footer {
+    width: 100%;
+    background-color: var(--primary-color);
+    box-sizing: border-box;
+    color: white;
+    box-shadow: 0 5px 10px #00000044;
+}
+
+#nav-logo {
+    box-shadow: 0 2px 6px #00000044;
 }
 
 a {
@@ -39,130 +39,258 @@ a {
     color: inherit;
 }
 
-img {
+a:visited {
+    color: inherit;
+}
+
+
+
+
+
+
+/***   HEADER   ******************************************************************************************/
+/********************************************************************************************************/
+/*******************************************************************************************************/
+/******************************************************************************************************/
+
+
+
+#nav-logo {
+    font-size: 24px;
+    color: var(--accent-color);
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 7px;
+    width: 110px;
+    text-align: center;
+}
+
+
+/*** Search Bar ************************************************************/
+/**************************************************************************/
+
+#search-bar {
+    text-align: center;
+}
+
+#search-bar input {
+    width: 65%;
+    padding: 1em;
+    border: none;
+    border-radius: 20px;
+    height: 4px;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+#search-results {
+    display: none;
+    position: absolute;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 5px;
+    z-index: 100;
+    transition: display 0.2s ease-in-out;
+}
+
+#search-results.show {
+    display: block;
+}
+
+#search-results p {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#search-results p:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+
+/***   MAIN   ********************************************************************************************/
+/********************************************************************************************************/
+/*******************************************************************************************************/
+/******************************************************************************************************/
+
+
+#carousel-prev,
+#carousel-next,
+#arrow-right,
+#arrow-left {
+    background: none;
+    color: var(--primary-color);
+    border: none;
+    cursor: pointer;
+}
+
+#carousel-next,
+#carousel-prev {
+    font-size: 45px;
+}
+
+#arrow-right,
+#arrow-left {
+    font-size: 30px;
+}
+
+#carousel-next:hover,
+#carousel-prev:hover,
+#arrow-right:hover,
+#arrow-left:hover {
+    background: var(--primary-color-transparent);
+}
+
+
+
+/*** Hero Carousel *********************************************************/
+/**************************************************************************/
+
+
+#hero-carousel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+#main-poster {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#side-posters {
+    display: none;
+}
+
+#side-posters div {
+    /*flex-grow: 1;*/
+    margin: 2px 0;
+    box-sizing: border-box;
+}
+
+#main-poster,
+#side-posters {
+    position: relative;
+}
+
+#side-posters img {
+    object-fit: cover;
+    height: 55%;
+    width: 55%;
+}
+
+
+/*** Recent Movies *********************************************************/
+/**************************************************************************/
+
+#recent-movies ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+#recent-movies ul li {
+    margin-bottom: 10px;
+}
+
+#main-poster .release-date {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #00000088;
+    color: white;
+    padding: 5px;
+}
+
+/*#main-poster {*/
+/*    width: 70%;*/
+/*}*/
+
+/*#side-posters {*/
+/*    width: 30%;*/
+/*}*/
+
+#main-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/*** Mini Carousel *********************************************************/
+/**************************************************************************/
+
+#mini-carousel {
+    display: flex;
+    align-items: center;
+}
+
+#carousel-posters {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+#carousel-posters div {
+    flex: 1;
+    margin: 5px;
+}
+
+#carousel-posters img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#mini-carousel {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+#movie-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+#movie-title {
+    width: 100%;
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+#movie-info {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+}
+
+#movie-poster {
     max-width: 100%;
     height: auto;
 }
 
-
-
-
-/*  HEADER  ******************************************************************************************/
-/****************************************************************************************************/
-/***************************************************************************************************/
-
-
-/*  Header  ************************************/
-/***********************************************/
-
-header {
-
+#movie-overview, #movie-genres, #movie-release, #movie-rating {
+    width: 100%;
+    text-align: justify;
 }
-
-
-/*  Nav Bar  ************************************/
-/***********************************************/
-
-nav {
-    display: flex;
-    padding: 4px;
-}
-
-.nav-logo {
-    padding: 0 16px;
-}
-
-
-
-
-
-
-
-
-/*  MAIN  ******************************************************************************************/
-/****************************************************************************************************/
-/***************************************************************************************************/
-
-
-/*  Carousel  ***********************************/
-/***********************************************/
-
-.main-carousel-container {
-    position: relative;
-}
-
-.prev-button,
-.next-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 10px;
-    background-color: #ccc;
-    border: none;
-    color: #fff;
-    font-size: 40px;
-}
-
-.next-button {
-    right: 0;
-}
-
-.prev-button:hover,
-.next-button:hover {
-    background-color: #aaa;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*  TESTING  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
-/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
-/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
-
-
-/*header,*/
-.main-carousel-container
-{
-    border: 1px solid orange;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

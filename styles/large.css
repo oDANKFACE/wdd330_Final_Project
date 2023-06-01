@@ -1,0 +1,35 @@
+@media screen and (min-width: 768px) {
+
+
+    #hero-carousel {
+        flex-direction: row;
+        align-items: stretch;
+        margin: 0 auto 20px;
+        width: 85%;
+    }
+
+    #main-poster {
+        flex-basis: 60%;
+        flex-shrink: 0;
+        margin-right: 10px;
+        margin-left: 40px;
+
+    }
+
+    #side-posters {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        flex-grow: 1;
+        flex-basis: 40%;
+        flex-shrink: 0;
+    }
+
+    #carousel-next {
+        position: relative;
+        left: -100px;
+    }
+}
+
+

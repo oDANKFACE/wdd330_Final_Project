@@ -26,7 +26,7 @@ function displayMovies() {
     mainPoster.innerHTML = `
         <a href="movie_details.html?id=${upcomingMovies[movieIndex].id}">
             <img src="https://image.tmdb.org/t/p/w500${upcomingMovies[movieIndex].poster_path}" alt="${upcomingMovies[movieIndex].title}">
-            <div class="release-date">${upcomingMovies[movieIndex].release_date}</div>
+            <div class="release-date">Release Date: ${upcomingMovies[movieIndex].release_date}</div>
         </a>
     `;
 

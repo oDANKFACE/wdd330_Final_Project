@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Explorer App</title>
-<!--    <link rel="stylesheet" href="styles/new_base.css">-->
-    <link rel="stylesheet" href="styles/new_new_base.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/normalize.css">
 </head>
 <body>
 <header class="header">
@@ -15,10 +16,10 @@
     <div id="hero-carousel">
         <button id="carousel-prev">&#10094;</button>
         <div id="main-poster">
-            <!-- The main movie poster will be populated here -->
+            <!-- The main upcoming movie poster will be populated here -->
         </div>
         <div id="side-posters">
-            <!-- The side movie posters will be populated here -->
+            <!-- The queued upcoming movie posters will be populated here -->
         </div>
         <button id="carousel-next">&#10095;</button>
     </div>
@@ -26,7 +27,7 @@
     <section id="mini-carousel">
         <button id="arrow-left" onclick="moveCarousel(-1)">&#10094;</button>
         <div id="carousel-posters">
-            <!-- Movie posters will be populated here -->
+            <!-- Recently released posters will be populated here -->
         </div>
         <button id="arrow-right" onclick="moveCarousel(1)">&#10095;</button>
     </section>
@@ -38,9 +39,8 @@
     </div>
 </main>
 <footer class="footer">
-    <!-- Footer contents -->
+    <!-- Footer contents will be populated here -->
 </footer>
-<!--<script src="script.js"></script>-->
 <script src="scripts/load.js"></script>
 <script src="scripts/search_bar.js"></script>
 <script src="scripts/recently_viewed.js"></script>
